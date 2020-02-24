@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Patch Notes</title>
+  </head>
+  <body>
+    <h1>Patch Notes</h1>
+    <h2>v0.19.7</h2>
+    <h3>Stealership</h3>
+    <ul>
+      <li>
+        Fixed PATCH /api/stealership/locations. Will now respond with updated
+        location.
+      </li>
+    </ul>
+    <h2>v0.19.6</h2>
+    <h3>Stealership</h3>
+    <ul>
+      <li>
+        Fixed PATCH /api/stealership/cars. Will now respond with updated car.
+      </li>
+    </ul>
+    <h2>v0.19.5</h2>
+    <h3>Stealership</h3>
+    <ul>
+      <li>
+        Fixed PATCH /api/stealership/cars. Will no longer respond with status
+        code 500 when requests are made.
+      </li>
+    </ul>
+    <h2>v0.19.4</h2>
+    <h3>Stealership</h3>
+    <ul>
+      <li>
+        Fixed POST /api/stealership/cars so when a car is added, "is_sold" is
+        "false", "sold_date" is "null", and "location_id" was added
+      </li>
+    </ul>
+    <h2>v0.19.3</h2>
+    <h3>Stealership</h3>
+    <ul>
+      <li>
+        Fixed the cars data so the sold date will now be "null" if the car's
+        is_sold property is false
+      </li>
+    </ul>
+    <h2>v0.19.2</h2>
+    <h3>Stealership</h3>
+    <ul>
+      <li>
+        Added a boolean field called "is_sold" to the cars entity
+      </li>
+      <li>Added "sold_date" in epoch time to the cars entity</li>
+    </ul>
+    <h2>v0.19.1</h2>
+    <h3>Stealership</h3>
+    <ul>
+      <li>
+        Fixed cars' location id. Had two decimal points and was incorrect range
+        of numbers. Now contains no decimal points and is within the correct
+        range.
+      </li>
+    </ul>
+    <h2>v0.19.0</h2>
+    <h3>General</h3>
+    <ul>
+      <li>
+        Reorganized routes files by project
+      </li>
+    </ul>
+    <h3>Stealership</h3>
+    <ul>
+      <li>
+        Added Stealership routes. What is Stealership?...You'll never
+        know...until some time in the near future...at which time I will tell
+        you. Don't act surprised.
+      </li>
+    </ul>
+    <h2>v0.17.4</h2>
+
+    <h3>Sosh</h3>
+    <ul>
+      <li>
+        Fixed POST '/sosh/statuses' (Adding a message). Will now with "user_id"
+        instead of "userId".
+      </li>
+    </ul>
+    <h2>v0.17.3</h2>
+
+    <h3>Sosh</h3>
+    <ul>
+      <li>
+        Fixed POST '/sosh/messages' (Adding a message). Will now add created_at
+        date field to newly created message.
+      </li>
+    </ul>
+    <h2>v0.17.2</h2>
+
+    <h3>Sosh</h3>
+    <ul>
+      <li>
+        Fixed '/sosh/user/:user_id/statuses' to where it will only respond with
+        the statuses of the "user_id" passed in
+      </li>
+    </ul>
+    <h2>v0.17.1</h2>
+
+    <h3>Sosh</h3>
+    <ul>
+      <li>
+        Fixed message "created_at" date strings to be valid JS Date strings
+      </li>
+      <li>
+        GET '/api/sosh/users/:user_id/messages' now sends back the 'created_at'
+        date sorted oldest to newest
+      </li>
+    </ul>
+
+    <h2>v0.17.0</h2>
+
+    <h3>General</h3>
+    <ul>
+      <li>ADDED PATCH NOTES!!!</li>
+      <li>
+        Removed "meetings" routes, since the entity hasn't existed in a while
+      </li>
+      <li>
+        Removed "contact list" data, since it is a duplicate of the "users"
+        entity
+      </li>
+      <li>
+        Organized the seeds directory by project name OR "misc", if not
+        associated directly with a project
+      </li>
+    </ul>
+    <h3>Sosh</h3>
+    <ul>
+      <li>Added comments to messages routes file</li>
+      <li>Changed "userId" to "user_id" in status object</li>
+      <li>Removed the "subject" property of the message object</li>
+      <li>
+        Added GET '/api/sosh/user/:user_id/statuses' to allow getting statuses
+        by the user's id
+      </li>
+      <li>
+        Added GET '/api/sosh/users/:user_id/messages' to get only the messages
+        sent or received by the user's id
+      </li>
+    </ul>
+  </body>
+</html>
