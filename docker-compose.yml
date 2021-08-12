@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  collective-api:
+    image: prom/api-collective
+    container_name: collective-api
+    restart: unless-stopped
+    ports:
+      - '8082:8082'
